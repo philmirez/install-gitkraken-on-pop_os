@@ -1,6 +1,21 @@
 # Install Gitkraken on Pop!_OS
 [Gitkraken | How to install](https://support.gitkraken.com/how-to-install)
 
+# .deb
+1. Download the debian package
+```
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+```
+
+2. Go to Applications -> Utilities
+3. Open Eddy
+4. Using Eddy, open the Gitkraken debian package and install it
+5. Done
+
+Much simpler than untarring it...mainly, because I ran into multiple issues.
+
+# .tar
+
 1. Download the tar file
 
 ```
@@ -16,9 +31,7 @@ tar -xvzf gitkraken-amd64.tar.gz
 sudo mv gitkraken /opt/
 ```
 
-4. 
-
-# Issue
+# Tar Issues
 1. Error with libcurl.so.4
 Error: libcurl.so.4: cannot open shared object file: No such file or directory.
 
@@ -44,7 +57,7 @@ Run the following command to address the dependency issue.
 sudo apt install libgnome-keyring-common libgnome-keyring-dev
 ```
 
-# Need to resolve
+# Tar issue that I was unable to resolve
 
 ```
 (gitkraken:29817): GConf-WARNING **: 00:21:33.736: Client failed to connect to the D-BUS daemon:
